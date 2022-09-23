@@ -38,3 +38,17 @@
     width: 100%;
   }
 }
+
+.avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-item {
+  color: #fff;
+  &.active {
+    color: #0389af;
+  }
+}
