@@ -1,7 +1,14 @@
 <footer class="container">
   <p class="float-end"><a href="#">Back to top</a></p>
   <p>
-    <a href="https://github.com/mandrasch/11ty-plain-bootstrap5">GitHub</a> ·
+    <a href="https://github.com/codheadclub">GitHub</a> ·
     <a href="{{ '/pages/imprint' | url }}">Imprint</a> · <a href="{{ '/pages/privacy' | url }}">Privacy</a>
   </p>
+  <div class="row">
+    {% for contrib in contribs %}
+    <a class="inline-block" href="{{ contributor.html_url }}">
+      <img src="{{contributor.avatar_url}}" class="img-fluid">
+      </a>
+      {% endfor %} 
+  </div>
 </footer>
