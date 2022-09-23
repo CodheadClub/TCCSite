@@ -1,14 +1,18 @@
 <footer class="container">
   <p class="float-end"><a href="#">Back to top</a></p>
   <p>
-    <a href="https://github.com/codheadclub">GitHub</a> ·
-    <a href="{{ '/pages/imprint' | url }}">Imprint</a> · <a href="{{ '/pages/privacy' | url }}">Privacy</a>
+    <a href="https://github.com/codheadclub">GitHub</a> · <a href="{{ '/pages/imprint' | url }}">Imprint</a> ·
+    <a href="{{ '/pages/privacy' | url }}">Privacy</a>
   </p>
   <div class="row">
-    {% for contrib in contribs %}
-    <a class="inline-block" href="{{ contributor.html_url }}">
-      <img src="{{contributor.avatar_url}}" class="img-fluid">
+    <div class="col-12 col-md text-center">
+      Made with love by:
+      <br />
+      {% for contrib in contribs %}
+      <a href="{{ contrib.html_url }}">
+        <img src="{{ contrib.avatar_url }}" class="avatar" />
       </a>
-      {% endfor %} 
+      {% endfor %}
+    </div>
   </div>
 </footer>
