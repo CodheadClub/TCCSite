@@ -46,9 +46,21 @@
   object-fit: cover;
 }
 
-.nav-item {
-  color: #fff;
+.nav-link {
+  color: #fff !important;
   &.active {
-    color: #0389af;
+    color: #0389af !important;
   }
+}
+
+.connect {
+  background-image: url("/assets/images/itclub.jpg");
+  background-size: cover;
+  height: 30em;
+}
+.btn-discord {
+  @include button-variant($btn-discord, $btn-discord-hover, $btn-discord-active);
+}
+.btn-telegram {
+  @include button-variant($btn-telegram, $btn-telegram-hover, $btn-telegram-active);
 }
