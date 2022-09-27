@@ -2,7 +2,7 @@ const SiteRepo = "CodheadClub/AwesomeResources"; // Define the repo to get contr
 const Cache = require("@11ty/eleventy-cache-assets");
 
 module.exports = async function () {
-  return await Cache(`https://api.github.com/repos/${SiteRepo}/`, {
+  return await Cache(`https://api.github.com/repos/${SiteRepo}/contributors`, {
     duration: "1w", // 1 week
     type: "json",
   });
