@@ -64,3 +64,18 @@
 .btn-telegram {
   @include button-variant($btn-telegram, $btn-telegram-hover, $btn-telegram-active);
 }
+.mainup {
+  margin-top: -4em;
+}
+.blue-text {
+  color: #01032c;
+}
+.getinvolved {
+  color: #01032c;
+  font-weight: 400;
+  font-style: oblique;
+}
+.about {
+  font-size: 24px;
+  font-weight: 400;
+}
