@@ -9,17 +9,14 @@ eleventyNavigation:
   key: Home
 ---
 
-<div class="p-5 mb-4 connect rounded-3">
+<div class="p-5 mb-4 rounded-3">
   <div class="container-fluid py-2">
-    <h1 class="display-5 fw-bold blue-text">Nerd power for social good.</h1>
-    <p class="col-md-10 fs-4 mb-0 pt-2 fw-bold blue-text">
-      We are tech professionals who volunteer our time for the benefit of society.
+    <h1 class="display-5 fw-bold nerd-power">Nerd power++</h1>
+    <p class="col-md-10 fs-4 mb-0 pt-2 fw-bold text-white">
+      We are tech professionals who volunteer our time for the benefit of society working on socially benefical tech projects and alongside CVS organisations.
     </p>
-
-
   </br>
-  </br>
-  <h2 class="getinvolved">Get Involved</h2> 
+  <p class="getinvolved">Get Involved</p> 
     <a class="btn btn-primary btn-lg mt-2" href="https://github.com/codheadclub">
       Github
       <svg
@@ -67,32 +64,38 @@ eleventyNavigation:
     </a>
   </div>
 </div>
+<div class="p-5 mb-4 connect rounded-3">
+  <div class="container-fluid py-2">
+
+  </div>
+</div>
 
 <div class="row align-items-md-stretch">
   <div class="col-md-6 mt-3">
-    <div class="h-100 p-5 text-white rounded-3" style="background-color: #fe6431">
+    <div class="h-100 p-5 text-white rounded-3" style="background-color: #6cb253">
       <h2>Awesome Resources</h2>
-      <p>Our members have composed an awesome list of tech resources. Check it out, contribute and share!</p>
+      <p>Our members have composed an awesome list of tech resources comprising multiple subject areas - programming, databases, operating sytems, cyber security and more! <b>Check it out, contribute and share!</b></p>
 
-      <h5>Contributors</h5>
+      <a href="https://github.com/codheadclub/awesomeresources" class="btn btn-outline-light">> Get free resources</a>
+    </br>
+    </br>
+      <h6><b>Awesome Resources contributors</b></h6>
       {% for awesome in awesomeresources %}
       <a href="{{ awesome.html_url }}">
         <img src="{{ awesome.avatar_url }}" class="avatar" />
       </a>
       {% endfor %}
-
-      <a href="https://github.com/codheadclub/awesomeresources" class="btn btn-outline-light">> Check it out</a>
     </div>
   </div>
   <div class="col-md-6 mt-3">
-    <div class="h-100 p-5 border rounded-3" style="background-color: #0069ff">
+    <div class="h-100 p-5 border rounded-3" style="background-color: #d20c0f">
       <h2>Hacktoberfest Fun</h2>
       <p>
         Each year, Hacktoberfest encourages participation in giving back to the open source community. We participate by
         opening our repositories to new contributions and this year is no different. Take a look at this years projects
         and get involved!
       </p>
-      <a href="{{ 'pages/another_site ' | url }}" class="btn btn-outline-dark">> Get involved!</a>
+      <a href="{{ 'pages/another_site ' | url }}" class="btn btn-outline-dark">> Start hacking</a>
     </div>
   </div>
 </div>
