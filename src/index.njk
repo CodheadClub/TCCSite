@@ -11,8 +11,15 @@ eleventyNavigation:
 
 <div class="p-5 mb-4 connect rounded-3">
   <div class="container-fluid py-2">
-    <h1 class="display-5 fw-bold">Get Involved</h1>
-    <p class="col-md-10 fs-4 mb-0 pt-2">We are tech professionals using our tech powers for social good.</p>
+    <h1 class="display-5 fw-bold blue-text">Nerd power for social good.</h1>
+    <p class="col-md-10 fs-4 mb-0 pt-2 fw-bold blue-text">
+      We are tech professionals who volunteer our time for the benefit of society.
+    </p>
+
+
+  </br>
+  </br>
+  <h2 class="getinvolved">Get Involved</h2> 
     <a class="btn btn-primary btn-lg mt-2" href="https://github.com/codheadclub">
       Github
       <svg
@@ -28,11 +35,7 @@ eleventyNavigation:
         />
       </svg>
     </a>
-    <a
-      class="btn btn-primary btn-discord text-white btn-lg mt-2"
-      href="https://gitpod.io/#https://github.com/mandrasch/11ty-plain-bootstrap5"
-      target="_blank"
-    >
+    <a class="btn btn-primary btn-discord text-white btn-lg mt-2" href="https://discord.gg/DmHbB2PpVn" target="_blank">
       Discord
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -47,11 +50,7 @@ eleventyNavigation:
         />
       </svg>
     </a>
-    <a
-      class="btn btn-telegram text-white btn-lg mt-2"
-      href="https://gitpod.io/#https://github.com/mandrasch/11ty-plain-bootstrap5"
-      target="_blank"
-    >
+    <a class="btn btn-telegram text-white btn-lg mt-2" href="https://t.me/codheadclub" target="_blank">
       Telegram
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -66,22 +65,27 @@ eleventyNavigation:
         />
       </svg>
     </a>
-    <p class="mt-4">
-      <small>Status: Always a bit "work in progress", but good to go.</small>
-    </p>
   </div>
 </div>
 
 <div class="row align-items-md-stretch">
   <div class="col-md-6 mt-3">
-    <div class="h-100 p-5 text-white bg-dark rounded-3">
+    <div class="h-100 p-5 text-white rounded-3" style="background-color: #fe6431">
       <h2>Awesome Resources</h2>
       <p>Our members have composed an awesome list of tech resources. Check it out, contribute and share!</p>
-      <a href="{{ 'pages/examples' | url }}" class="btn btn-outline-light">> Check it out</a>
+
+      <h5>Contributors</h5>
+      {% for awesome in awesomeresources %}
+      <a href="{{ awesome.html_url }}">
+        <img src="{{ awesome.avatar_url }}" class="avatar" />
+      </a>
+      {% endfor %}
+
+      <a href="https://github.com/codheadclub/awesomeresources" class="btn btn-outline-light">> Check it out</a>
     </div>
   </div>
   <div class="col-md-6 mt-3">
-    <div class="h-100 p-5 border rounded-3" style="background-color: #ff7979">
+    <div class="h-100 p-5 border rounded-3" style="background-color: #0069ff">
       <h2>Hacktoberfest Fun</h2>
       <p>
         Each year, Hacktoberfest encourages participation in giving back to the open source community. We participate by
@@ -89,65 +93,6 @@ eleventyNavigation:
         and get involved!
       </p>
       <a href="{{ 'pages/another_site ' | url }}" class="btn btn-outline-dark">> Get involved!</a>
-    </div>
-  </div>
-  <div class="col-md-6 mt-3">
-    <div class="h-100 p-5 border rounded-3" style="background-color: #f6e58d">
-      <h2>Request help</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-      </p>
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
-      </button>
-
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">...</div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-6 mt-3">
-    <div class="h-100 p-5 rounded-3" style="background-color: #7ed6df">
-      <h2>Sustainable Web Design?</h2>
-      <p>
-        Finished with developing your site with 11ty? Great! If you're interested in developing sustainable web sites as
-        well, check out:
-      </p>
-      <a class="btn btn-outline-dark" href="https://sustainablewebdesign.org" target="_blank">
-        sustainablewebdesign.org
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="bi bi-box-arrow-up-right"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
-          />
-          <path
-            fill-rule="evenodd"
-            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
-          />
-        </svg>
-      </a>
     </div>
   </div>
 </div>
