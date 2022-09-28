@@ -65,7 +65,7 @@
   @include button-variant($btn-telegram, $btn-telegram-hover, $btn-telegram-active);
 }
 .mainup {
-  margin-top: -7em;
+  margin-top: -5em;
 }
 .nerd-power {
   color: #fff;
@@ -84,5 +84,12 @@
   .nerd-power {
     color: #fff;
     font-size: 4em;
+  }
+}
+
+.issue-link {
+  color: #01032c !important;
+  &.hover {
+    color: #0389af !important;
   }
 }
