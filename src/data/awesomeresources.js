@@ -1,5 +1,5 @@
 const SiteRepo = "CodheadClub/AwesomeResources"; // Define the repo to get contributors from
-const Cache = require("@11ty/eleventy-cache-assets");
+const Cache = require("@11ty/eleventy-fetch");
 
 module.exports = async function () {
   return await Cache(`https://api.github.com/repos/${SiteRepo}/contributors`, {
