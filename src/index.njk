@@ -80,6 +80,7 @@ eleventyNavigation:
     </br>
     </br>
       <h6><b>Awesome Resources contributors</b></h6>
+    </br>
       {% for awesome in awesomeresources %}
       <a href="{{ awesome.html_url }}">
         <img src="{{ awesome.avatar_url }}" class="avatar" />
@@ -95,7 +96,15 @@ eleventyNavigation:
         opening our repositories to new contributions and this year is no different. Take a look at this years projects
         and get involved!
       </p>
-      <a href="{{ 'pages/another_site ' | url }}" class="btn btn-outline-dark">> Start hacking</a>
+      <a href="{{ 'pages/another_site ' | url }}" class="btn btn-outline-light">> Start hacking</a>
+    </br>
+  </br>
+    <h6><b>Issues open for contributions:</b></h6>
+    {% for issues in arissues %}
+    <a href="{{ issues.html_url }}">
+        <h4 class="issue-link">{{ issues.title }}</h4>
+    {% endfor %}
+
     </div>
   </div>
 </div>
