@@ -13,9 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Use Node LTS
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: "16" # lts
 
@@ -35,7 +35,7 @@ jobs:
           BASE_URL: "https://${{ github.event.repository.owner.name }}.github.io/"
           PATH_PREFIX: "/${{ github.event.repository.name }}/"
       - name: Deploy to Github Pages 🚀
-        uses: JamesIves/github-pages-deploy-action@3.6.2
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: _site #the static site folder
