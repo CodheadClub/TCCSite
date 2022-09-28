@@ -15,8 +15,7 @@ console.log("pathPrefix is set to ...", pathPrefix);
 // related: https://github.com/11ty/eleventy/issues/1641
 const globalSiteData = {
   title: "The Codhead Club",
-  description:
-    "The Codhead Club is an initiative run by technical professionals to aid social, voluntary and charity sector organisations access advice and skills which they may not otherwise have been able to afford. In addition, we contribute to projects and events for social good.",
+  description: "We are tech professionals who volunteer our time for the benefit of society working on socially benefical tech projects and alongside CVS organisations.",
   locale: "en",
   baseUrl: baseUrl,
   pathPrefix: pathPrefix,

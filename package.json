@@ -1,7 +1,7 @@
 {
-  "name": "11ty-plain-bootstrap5",
-  "version": "0.0.1",
-  "description": "Plain simple template for 11ty/eleventy and bootstrap5.",
+  "name": "TCCSite",
+  "version": "0.1",
+  "description": "The Codhead Club Website",
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dist",
@@ -14,18 +14,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mandrasch/11ty-plain-bootstrap5.git"
+    "url": "git+https://github.com/closebracket/TCCSite.git"
   },
   "keywords": [],
-  "author": "Matthias Andrasch",
+  "author": "Edward Richmond",
   "license": "MIT",
   "browserslist": [
     "last 4 versions"
   ],
   "bugs": {
-    "url": "https://github.com/mandrasch/11ty-plain-bootstrap5/issues"
+    "url": "https://github.com/closebracket/TCCSite/issues"
   },
-  "homepage": "https://github.com/mandrasch/11ty-plain-bootstrap5#readme",
+  "homepage": "https://github.com/closebracket/TCCSite#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
     "@11ty/eleventy-img": "^2.0.0",
