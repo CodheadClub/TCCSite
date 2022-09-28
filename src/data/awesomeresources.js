@@ -3,7 +3,7 @@ const Cache = require("@11ty/eleventy-cache-assets");
 
 module.exports = async function () {
   return await Cache(`https://api.github.com/repos/${SiteRepo}/contributors`, {
-    duration: "1w", // 1 week
+    duration: "1d", // Update every day
     type: "json",
   });
 };
