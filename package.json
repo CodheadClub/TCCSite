@@ -1,6 +1,6 @@
 {
   "name": "TCCSite",
-  "version": "0.1",
+  "version": "0.0.1",
   "description": "The Codhead Club Website",
   "main": "index.js",
   "scripts": {
