@@ -4,12 +4,12 @@
 name: Deploy Site
 on:
   push:
-    branch: 
-    -  "master"
+    branches:
+      - "master"
     paths-ignore:
-    - "**/README.md"
+      - "**/README.md"
   workflow_dispatch:
-    
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -30,23 +30,22 @@ jobs:
           ELEVENTY_ENV: production
           BASE_URL: "https://codheadclub.github.io"
           PATH_PREFIX: "/${{ github.event.repository.name }}/"
-      
   deploy:
     needs: build
-      permissions:
-        pages: write      # to deploy to Pages
-        id-token: write   # to verify the deployment originates from an appropriate source
+    permissions:
+      pages: write # to deploy to Pages
+      id-token: write # to verify the deployment originates from an appropriate source
 
-      # Deploy to the github-pages environment
-      environment:
-        name: github-pages
-        url: ${{ steps.deployment.outputs.page_url }}
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
-      # Specify runner + deployment step
-      runs-on: ubuntu-latest
-      steps:
-        - name: Deploy to GitHub Pages
-          uses: JamesIves/github-pages-deploy-action@v4
-          with:
-            branch: gh-pages
-            folder: _site
+    # Specify runner + deployment step
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: _site
