@@ -31,18 +31,9 @@ jobs:
         ELEVENTY_ENV: production
         BASE_URL: "https://codheadclub.github.io"
         PATH_PREFIX: "/${{ github.event.repository.name }}/"
-  
-  upload:
-      needs: build
-        steps:
-        - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          branch: gh-pages
-          folder: _site #the static site folder
-        
+      
   deploy:
-      needs: upload
+      needs: build
       permissions:
         pages: write      # to deploy to Pages
         id-token: write   # to verify the deployment originates from an appropriate source
@@ -56,5 +47,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: Deploy to GitHub Pages
-          id: deployment
-          uses: actions/deploy-pages@v1
+          uses: JamesIves/github-pages-deploy-action@v4
+          with:
+            branch: gh-pages
+            folder: _site #the static site folder
