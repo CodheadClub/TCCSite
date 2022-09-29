@@ -22,13 +22,15 @@ jobs:
           node-version: "18"
           cache: npm
       - name: Install and Build for Github Pages
-        run: npm install
-          npm audit fix
+        run: npm ci
           npm run build
         env:
           ELEVENTY_ENV: production
           BASE_URL: "https://${{ github.event.repository.owner.name }}.github.io/"
           PATH_PREFIX: "/${{ github.event.repository.name }}/"
+        with:
+          publish_branch: gh-pages
+          publish_dir: _site
   deploy:
     needs: build
     permissions:
@@ -44,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          branch: gh-pages
-          folder: _site
+          publish_branch: gh-pages
+          publish_dir: _site
