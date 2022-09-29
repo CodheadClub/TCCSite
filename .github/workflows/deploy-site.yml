@@ -28,9 +28,6 @@ jobs:
           ELEVENTY_ENV: production
           BASE_URL: "https://${{ github.event.repository.owner.name }}.github.io/"
           PATH_PREFIX: "/${{ github.event.repository.name }}/"
-        with:
-          publish_branch: gh-pages
-          publish_dir: _site
   deploy:
     needs: build
     permissions:
