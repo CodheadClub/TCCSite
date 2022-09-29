@@ -32,7 +32,7 @@ jobs:
           PATH_PREFIX: "/${{ github.event.repository.name }}/"
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.DEPLOY_SECRET }}
           branch: gh-pages
