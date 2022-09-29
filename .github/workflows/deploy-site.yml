@@ -39,8 +39,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          publish_branch: gh-pages
-          publish_dir: _site
-          github_token: ${{ secrets.DEPLOY_SECRET }}
+        uses: JamesIves/github-pages-deploy-action@master
+        env:
+          ACCESS_TOKEN: ${{ secrets.DEPLOY_SECRET }}
+          BRANCH: gh-pages
+          FOLDER: _site
