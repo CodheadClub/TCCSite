@@ -24,8 +24,6 @@ jobs:
       - name: Install and Build for Github Pages
         run: npm install
           npm audit fix
-          npm run dev:mix
-          npm run dev:eleventy
           npm run build
         env:
           ELEVENTY_ENV: production
