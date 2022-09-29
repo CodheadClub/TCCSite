@@ -22,7 +22,8 @@ jobs:
           node-version: "18"
           cache: npm
       - name: Install and Build for Github Pages
-        run: npm ci
+        run: npm install
+          npm audit fix
           npm run build
         env:
           ELEVENTY_ENV: production
