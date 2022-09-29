@@ -4,7 +4,7 @@
 name: Deploy Site
 on:
   push:
-    branches: 
+    branch: 
     -  "master"
     paths-ignore:
     - "**/README.md"
@@ -14,26 +14,25 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-    - name: Setup Pages
-      uses: actions/configure-pages@v2
-    - name: Use Node LTS
-      uses: actions/setup-node@v3
-      with:
-        node-version: "16"
-        cache: 'npm'
-    - name: Install and Build for Github Pages
-      run: |
-        npm install 
-        npm run build
-      env:
-        ELEVENTY_ENV: production
-        BASE_URL: "https://codheadclub.github.io"
-        PATH_PREFIX: "/${{ github.event.repository.name }}/"
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+      - name: Use Node LTS
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+      - name: Install and Build for Github Pages
+        run: |
+          npm install 
+          npm run build
+        env:
+          ELEVENTY_ENV: production
+          BASE_URL: "https://codheadclub.github.io"
+          PATH_PREFIX: "/${{ github.event.repository.name }}/"
       
   deploy:
-      needs: build
+    needs: build
       permissions:
         pages: write      # to deploy to Pages
         id-token: write   # to verify the deployment originates from an appropriate source
@@ -50,4 +49,4 @@ jobs:
           uses: JamesIves/github-pages-deploy-action@v4
           with:
             branch: gh-pages
-            folder: .
+            folder: _site
