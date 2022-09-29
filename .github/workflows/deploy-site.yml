@@ -24,6 +24,8 @@ jobs:
       - name: Install and Build for Github Pages
         run: npm install
           npm audit fix
+          npm run dev:mix
+          npm run dev:eleventy
           npm run build
         env:
           ELEVENTY_ENV: production
@@ -41,6 +43,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages
-          folder: .
           token: ${{ secrets.DEPLOY_SECRET }}
+          branch: gh-pages
+          target-folder: _site
+          folder: _site
