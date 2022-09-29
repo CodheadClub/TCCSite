@@ -43,5 +43,4 @@ jobs:
         with:
           token: ${{ secrets.DEPLOY_SECRET }}
           branch: gh-pages
-          target-folder: _site
-          folder: _site
+          folder: .
