@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codheadclub/TCCSite.git"
+    "url": "git+https://github.com/codheadclub/codheadclub.github.io.git"
   },
   "keywords": [],
   "author": "Edward Richmond",
@@ -23,9 +23,9 @@
     "last 4 versions"
   ],
   "bugs": {
-    "url": "https://github.com/codheadclub/TCCSite/issues"
+    "url": "https://github.com/codheadclub/codheadclub.github.io/issues"
   },
-  "homepage": "https://github.com/codheadclub/TCCSite#readme",
+  "homepage": "https://github.com/codheadclub/codheadclub.github.io#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
     "@11ty/eleventy-img": "^2.0.0",
