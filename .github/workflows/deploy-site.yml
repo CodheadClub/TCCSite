@@ -15,11 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          github_token: ${{ secrets.DEPLOY_SECRET }}
+        uses: actions/checkout@v2.3.4
       - name: Use Node LTS
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
           node-version: "18"
           cache: npm
@@ -49,3 +47,4 @@ jobs:
         with:
           publish_branch: gh-pages
           publish_dir: _site
+          github_token: ${{ secrets.DEPLOY_SECRET }}
