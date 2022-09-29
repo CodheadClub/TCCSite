@@ -27,8 +27,7 @@ jobs:
         npm run build
       env:
         ELEVENTY_ENV: production
-        BASE_URL: "https://codheadclub.github.io"
-        PATH_PREFIX: "/${{ github.event.repository.name }}/"
+        BASE_URL: "https://codheadclub.co.uk"
     - name: Deploy to Github Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
