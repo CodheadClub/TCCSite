@@ -25,10 +25,11 @@ jobs:
       - name: Install and Build for Github Pages
         run: |
           npm install 
+          npm audit fix
           npm run build
         env:
           ELEVENTY_ENV: production
-          BASE_URL: "https://codheadclub.github.io"
+          BASE_URL: "https://${{ github.event.repository.owner.name }}.github.io/"
           PATH_PREFIX: "/${{ github.event.repository.name }}/"
   deploy:
     needs: build
