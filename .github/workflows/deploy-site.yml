@@ -30,7 +30,7 @@ jobs:
         BASE_URL: "https://codheadclub.github.io"
         PATH_PREFIX: "/${{ github.event.repository.name }}/"
         
-    deploy:
+  deploy:
       needs: build
       permissions:
         pages: write      # to deploy to Pages
