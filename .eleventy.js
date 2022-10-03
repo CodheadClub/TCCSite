@@ -15,8 +15,7 @@ console.log("pathPrefix is set to ...", pathPrefix);
 // related: https://github.com/11ty/eleventy/issues/1641
 const globalSiteData = {
   title: "The Codhead Club",
-  description:
-    "We are tech professionals who volunteer our time for the benefit of society working on socially benefical tech projects and alongside CVS organisations.",
+  description: "We are tech professionals who volunteer our time for the benefit of society working on socially benefical tech projects and alongside CVS organisations.",
   locale: "en",
   baseUrl: baseUrl,
   pathPrefix: pathPrefix,

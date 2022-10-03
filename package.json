@@ -8,7 +8,7 @@
     "dev": "npm-run-all clean -p dev:*",
     "dev:eleventy": "eleventy --serve --quiet",
     "dev:mix": "mix watch",
-    "build:eleventy": "eleventy",
+    "build:eleventy": "npx eleventy",
     "build:mix": "mix --production",
     "build": "npm-run-all clean -s build:mix build:eleventy"
   },
