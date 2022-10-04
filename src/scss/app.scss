@@ -5,19 +5,6 @@
 
 // Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "~bootstrap/scss/functions";
-
-@import "~bootstrap/scss/bootstrap";
-
-// Variable overrides
-@import "tcc_theme";
-
-// Add additional custom code here
-/*
- * Your custom scss
- * Add your styles here
- */
 @import "custom";
-
-/*body {
-  color: red !important;
-}*/
+@import "tcc_theme";
+@import "~bootstrap/scss/bootstrap";
