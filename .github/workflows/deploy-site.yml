@@ -9,6 +9,10 @@ on:
     paths-ignore:
       - "**/README.md"
   workflow_dispatch:
+    permissions:
+    contents: read
+    pages: write
+    id-token: write
 
 jobs:
   build:
@@ -21,24 +25,31 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2.3.4
-      
+
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+
       - name: Install dependencies
         run: |
           npm install
-          npm install sass
           npm audit fix
-      
+
       - name: Build!
         run: npm run build
         env:
           ELEVENTY_ENV: production
           BASE_URL: "https://${{ github.event.repository.owner.name }}.github.io/"
           PATH_PREFIX: "/${{ github.event.repository.name }}/"
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: _site
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
