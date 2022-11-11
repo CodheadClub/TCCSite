@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dist",
-    "dev": "npm-run-all clean -p dev:*",
-    "dev:eleventy": "eleventy --serve --quiet",
-    "dev:mix": "mix watch",
+    "dev": "npx eleventy --serve --quiet && npx mix watch",
     "build:eleventy": "npx eleventy",
     "build:mix": "mix --production",
     "build": "npm-run-all clean -s build:mix build:eleventy",
