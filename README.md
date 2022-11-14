@@ -21,7 +21,12 @@ Added by [@closebracket](github.com/closebracket):
 
 **Start local development with**
 
-- `npm run dev` 
+- `npm run dev`
+
+**Clean** 
+
+For Windows: use: `"clean": "del /s dist"` on line 7 of package.json
+For Linux: use: `"clean":"rm -rf dist" ` on line 7 of package.json
 
 Preview runs on http://localhost:8080/.
 
