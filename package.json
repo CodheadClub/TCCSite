@@ -4,8 +4,8 @@
   "description": "The Codhead Club Website",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf dist",
-    "dev": "npx clean && npx eleventy --serve --quiet && npx mix watch",
+    "clean": "del /s dist",
+    "dev": "npx eleventy --serve --quiet && npx mix watch",
     "build:eleventy": "npx eleventy",
     "build:mix": "mix --production",
     "build": "npm-run-all clean -s build:mix build:eleventy",
@@ -31,8 +31,8 @@
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@popperjs/core": "^2.11.6",
-    "autoprefixer": "^10.4.12",
-    "bootstrap": "^5.2.1",
+    "autoprefixer": "10.4.12",
+    "bootstrap": "^5.2.2",
     "cross-env": "^7.0.3",
     "del-cli": "^5.0.0",
     "eslint": "^8.27.0",
@@ -50,6 +50,7 @@
     "sass-loader": "^13.0.2"
   },
   "dependencies": {
-    "@11ty/eleventy-fetch": "^3.0.0"
+    "@11ty/eleventy-fetch": "^3.0.0",
+    "postcss-custom-properties": "^12.1.10"
   }
 }
