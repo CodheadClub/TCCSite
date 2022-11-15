@@ -1,3 +1,4 @@
+<div class=""
 <div class="container py-4">
   <header class="pb-3 mb-4">
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -10,14 +11,13 @@
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
+          data-bs-target="#menuItems"
           aria-controls="navbarNav"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">{% include "navigation.njk" %}</div>
+        <div class="collapse navbar-collapse" data-bs-toggle="collapse" id="menuItems">{% include "navigation.njk" %}</div>
       </div>
     </nav>
   </header>
